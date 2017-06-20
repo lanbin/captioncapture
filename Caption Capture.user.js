@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Caption Capture
 // @namespace    http://github.com/lanbin
-// @version      0.2
-// @description  Caption Capture
+// @version      0.3
+// @description  Caption Capture Merge
 // @author       lanbin
 // @match        https://*.qq.com/*
 // @match        https://*.youtube.com/*
@@ -209,9 +209,9 @@
         clicked = true;
         if(pressNum === 0){
             context.drawImage(video, 0, 0, vWidth, vHeight- bottomGap, 0, 0, vWidth, vHeight - bottomGap);
-            context.font = "13px Arial";
-            context.fillStyle = "white";
-            context.fillText("Screen Shot by Caption Capture",10,20);
+            // context.font = "13px Arial";
+            // context.fillStyle = "white";
+            // context.fillText("Screen Shot by Caption Capture",10,20);
             pressNum++;
             clicked = false;
         }else{
