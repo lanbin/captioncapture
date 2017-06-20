@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Caption Capture
 // @namespace    http://github.com/lanbin
-// @version      0.1
+// @version      0.2
 // @description  Caption Capture
 // @author       lanbin
 // @match        https://*.qq.com/*
