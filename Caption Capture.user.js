@@ -103,12 +103,17 @@
         capCanvas.height = video.videoHeight;
 
         canvasBox.id = "cc-canvas-box";
-        canvasBox.style = "max-height:600px;overflow-y:scroll;";
+        var boxStyle = "max-height:600px;overflow-y:scroll;";
+
+        if(window.screen.availWidth < 2000) {
+            boxStyle += "zoom:0.6;";
+        }
+        canvasBox.style = boxStyle;
         canvasBox.appendChild(capCanvas);
 
         capPanel = document.createElement("div");
         capPanel.id = "cc-caption-panel";
-        capPanel.style="position: fixed; right: 100px; bottom:20px;min-width:760px;background-color: #ccc;display:block;z-index:9999999;padding-bottom:80px;box-shadow: 0 0 15px #000000;";
+        capPanel.style="position: fixed; right: 100px; bottom:20px;background-color: #ccc;display:block;z-index:9999999;padding-bottom:80px;box-shadow: 0 0 15px #000000;";
 
         var addScreenShotBtn = document.createElement("div");
         addScreenShotBtn.id = "cc-screen-shot-btn";
@@ -123,8 +128,8 @@
         var inputBox = document.createElement("div");
         var btnBox = document.createElement("div");
         var bottomBox = document.createElement("div");
-        btnBox.style="float:left;width:80%;height:80px;";
-        inputBox.style="float:left;width:20%;height:80px;";
+        btnBox.style="float:left;width:70%;height:80px;";
+        inputBox.style="float:left;width:30%;height:80px;";
         bottomBox.style = "position:absolute;left:0;right:0;";
 
         var bottomHeightLabel = document.createElement("label");
@@ -159,7 +164,7 @@
 
 
         capCanvas.id = "cc-screen-shot";
-        capCanvas.style = "display:block";
+
 
 
         btnBox.appendChild(addScreenShotBtn);
